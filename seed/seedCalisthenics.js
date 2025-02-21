@@ -13,7 +13,6 @@ const calisthenicsWorkouts = [
   {
     type: 'Calisthenics',
     category:'Chest',
-    warmup: standardWarmup,
     main: [
       'Standard push-ups',
       'Diamond push-ups',
@@ -21,25 +20,23 @@ const calisthenicsWorkouts = [
     ],
     sets: 4,
     reps: '10-15',
-    restPeriod: '30-60 seconds',
+    
   },
   // Pull-Ups
   {
     type: 'Calisthenics',
     category: 'Shoulders',
-    warmup: standardWarmup,
     main: [
       'isometric hand stands'
     ],
     sets: 4,
     reps: '5-10',
-    restPeriod: '60 seconds',
+    
   },
   // Squats
   {
     type: 'Calisthenics',
     category: 'Legs',
-    warmup: standardWarmup,
     main: [
       'Isometric squats holds',
       'Isometric calf raises',
@@ -47,13 +44,12 @@ const calisthenicsWorkouts = [
     ],
     sets: 4,
     reps: '15-20',
-    restPeriod: '30-60 seconds',
+    
   },
   // Dips
   {
     type: 'Calisthenics',
     category: 'Arms',
-    warmup: standardWarmup,
     main: [
       'Bench dips',
       'Straight bar dips',
@@ -61,20 +57,18 @@ const calisthenicsWorkouts = [
     ],
     sets: 3,
     reps: '8-12',
-    restPeriod: '45-60 seconds',
+    r
   },
  
   // Planks
   {
     type: 'Calisthenics',
     category: 'Core',
-    warmup: standardWarmup,
     main: [
       'Side plank, with sand bag.',
     ],
     sets: 3,
     reps: 'Hold for 30-60 seconds',
-    restPeriod: '30 seconds',
   },
 ];
 

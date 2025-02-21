@@ -2,26 +2,31 @@ const mongoose = require('mongoose');
 
 // Define Calisthenics workout schema
 const calisthenicsSchema = new mongoose.Schema({
-  type: { 
-    type: String, 
-    required: true, 
-    default: 'Calisthenics' // Ensures all entries are categorized as Calisthenics
+  type: {
+    type: String,
+    required: false,
+    default: 'Calisthenics',
   },
-  category: { 
-    type: String, 
-    required: true,  // Categories like Push-ups, Pull-ups, Legs, etc.
+  category: {
+    type: String,
+    required: false, 
   },
-  warmup: [String],  // List of warm-up exercises
-  main: [String],    // List of main exercises
-  sets: { 
-    type: Number, 
-    required: true,  // Number of sets for the workout
+  exercise: { 
+    type: String, // Add exercise as a new field if needed
+    required: false,
   },
   reps: { 
     type: String, 
-    required: true,  // Repetition range (e.g., "10-15")
+    required: false, 
   },
- 
+  sets: { 
+    type: String, 
+    required: false,
+  },
+  duration: {
+    type: String,
+    required: false,
+  }
 });
 
 // Create the model based on the schema

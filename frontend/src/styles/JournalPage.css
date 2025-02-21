@@ -1,0 +1,300 @@
+/* Container for the page content */
+.journal-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Form Styles */
+.journal-form {
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.journal-form label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.journal-form input,
+.journal-form select,
+.journal-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.journal-form button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.journal-form button:hover {
+  background-color: #0056b3;
+}
+
+/* Journal Entries */
+.journal-entry {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 15px;
+}
+
+.journal-entry h2 {
+  margin-bottom: 5px;
+}
+
+.journal-entry p {
+  margin: 5px 0;
+}
+
+.journal-entry .category {
+  font-weight: bold;
+}
+
+/* General Page Styling */
+.journal-page {
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+/* Workout Form Styling */
+.workout-form {
+  background: #f8f9fa;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.workout-form label {
+  font-weight: bold;
+}
+
+.workout-form input,
+.workout-form select {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.workout-form button {
+  background: #007bff;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.workout-form button:hover {
+  background: #0056b3;
+}
+
+/* Success & Error Messages */
+.success-text {
+  color: green;
+  font-weight: bold;
+}
+
+.error-text {
+  color: red;
+  font-weight: bold;
+}
+
+/* Workout Log Styling */
+.workout-log {
+  margin-top: 20px;
+  padding: 15px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.workout-log table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.workout-log th,
+.workout-log td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+.workout-log th {
+  background: #007bff;
+  color: white;
+}
+
+.log-placeholder {
+  text-align: center;
+  color: #888;
+  font-style: italic;
+}
+
+.workout-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.workout-table th,
+.workout-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+.workout-table th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+}
+
+.workout-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.workout-table tr:hover {
+  background-color: #f1f1f1;
+}
+
+.success-text {
+  color: green;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.error-text {
+  color: red;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* Container for the buttons */
+.workout-category-buttons {
+  display: flex;
+  justify-content: space-between; /* Spread buttons equally */
+  margin-bottom: 20px;
+  padding: 10px 0;
+  width: 100%; /* Ensure full width */
+}
+
+/* Individual button styling */
+.workout-category-buttons button {
+  flex: 1; /* Ensure buttons span equally */
+  padding: 10px 20px;
+  margin: 0 10px;
+  background-color: #4caf50; /* Green background */
+  color: white; /* White text */
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Button hover effect */
+.workout-category-buttons button:hover {
+  background-color: #45a049;
+  transform: scale(1.05); /* Slightly enlarge the button */
+}
+
+/* Active button styling (if needed for active state) */
+.workout-category-buttons button.active {
+  background-color: #2e8b57; /* Darker green when active */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+.workout-category-buttons button:focus {
+  outline: none; /* Remove the default focus outline */
+  box-shadow: 0 0 0 2px #45a049; /* Green focus ring */
+}
+
+/* Center the title */
+h1 {
+  text-align: center; /* Centers the text horizontally */
+  margin-top: 20px; /* Optional: Adds space above the title */
+  font-size: 4.5rem !important;
+  color: #f90101 !important;
+  font-family: "Cursive", sans-serif;
+}
+
+/* Flex layout for chart and historical data side by side */
+.journal-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Space between the sections */
+  justify-content: space-between;
+}
+
+.historical-data,
+.chart-container {
+  flex: 1; /* Both containers take equal space */
+  min-width: 300px; /* Prevents them from getting too small */
+}
+
+.workout-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.workout-table th,
+.workout-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+.workout-table th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+}
+
+.workout-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.workout-table tr:hover {
+  background-color: #f1f1f1;
+}
+
+.workout-category-buttons button {
+  padding: 10px 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #a1c5e9;
+  transition: background-color 0.3s ease;
+}
+
+.workout-category-buttons button.active {
+  background-color: #007bff; /* Highlight with a blue color */
+  color: rgb(238, 96, 96); /* Change text color */
+  border-color: #007bff; /* Match border with background */
+}
+
+.workout-category-buttons button:hover {
+  background-color: #e2e6ea; /* Light grey background on hover */
+}

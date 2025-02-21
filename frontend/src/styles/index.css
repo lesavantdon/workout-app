@@ -1,0 +1,63 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+/* Basic Calendar Styles */
+/* Basic Calendar Styles */
+.monthly-calendar {
+  font-family: Arial, sans-serif;
+  width: 700px; /* FIXED WIDTH */
+  margin: 0 auto;
+}
+
+.calendar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.weekdays,
+.week {
+  display: grid;
+  grid-template-columns: repeat(7, 100px); /* FIXED COLUMN SIZE */
+}
+
+.weekdays {
+  text-align: center;
+  font-weight: bold;
+  background-color: #f0f0f0;
+  padding: 5px;
+}
+
+.day,
+.empty {
+  width: 100px; /* FIXED SIZE */
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  font-size: 14px;
+  border: 1px solid #ddd;
+}
+
+.day {
+  background-color: #fff;
+}
+
+.empty {
+  background-color: #f0f0f0;
+}
+
+.h1 {
+  text-align: center;
+  width: 100%;
+}

@@ -1,0 +1,158 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: inline;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* General Layout */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Navbar Styles */
+.navbar {
+  background-color: #f8f9fa;
+}
+
+.navbar-nav {
+  display: flex;
+  gap: 20px;
+}
+
+.navbar-nav .nav-item.active .nav-link {
+  font-weight: bold;
+  color: #007bff;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  color: #007bff;
+}
+
+/* General Container */
+.journal-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Tabs for Workout Selection */
+.tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.tabs button {
+  padding: 10px 15px;
+  margin: 0 5px;
+  border: none;
+  background-color: #ccc;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.tabs .active {
+  background-color: #007bff;
+  color: white;
+}
+
+/* Form Styles */
+.journal-form {
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.journal-form label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.journal-form input,
+.journal-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.journal-form button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.journal-form button:hover {
+  background-color: #0056b3;
+}
+
+* Tabloid Table */ .table-container {
+  overflow-x: auto;
+}
+
+.tabloid-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.tabloid-table th,
+.tabloid-table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 2px solid #ddd;
+}
+
+.tabloid-table th {
+  background-color: #007bff;
+  color: white;
+  font-weight: bold;
+}
+
+.tabloid-table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.tabloid-table tr:hover {
+  background-color: #ddd;
+}

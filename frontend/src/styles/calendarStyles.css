@@ -1,0 +1,47 @@
+/* Calendar */
+.monthly-calendar {
+  font-family: Arial, sans-serif;
+  width: 700px; /* FIXED WIDTH */
+  margin: 0 auto;
+}
+
+.calendar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.weekdays,
+.week {
+  display: grid;
+  grid-template-columns: repeat(7, 100px); /* FIXED COLUMN SIZE */
+}
+
+.workout-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 18px;
+  text-align: left;
+}
+
+.workout-table th,
+.workout-table td {
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+.workout-table th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+  text-align: center;
+}
+
+.workout-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.workout-table tr:hover {
+  background-color: #e6f7ff;
+  transition: background-color 0.2s ease-in-out;
+}

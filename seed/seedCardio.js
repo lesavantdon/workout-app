@@ -12,7 +12,6 @@ const hiitWorkouts = [
   {
     type: 'Cardio',
     category: 'HIIT',
-    warmup: standardWarmup,
     main: [
       'Hill climb sprints',
     ],
@@ -20,7 +19,6 @@ const hiitWorkouts = [
   {
     type: 'Cardio',
     category: 'HIIT',
-    warmup: standardWarmup,
     main: [
       '100-yard dashes: 8x all-out sprints',
     ],
@@ -28,7 +26,6 @@ const hiitWorkouts = [
   {
     type: 'Cardio',
     category: 'HIIT',
-    warmup: standardWarmup,
     main: [
       'Stair sprints',
     ],
@@ -36,7 +33,6 @@ const hiitWorkouts = [
   {
     type: 'Cardio',
     category: 'HIIT',
-    warmup: standardWarmup,
     main: [
       'Bike sprints',
     ],
@@ -48,25 +44,21 @@ const aerobicWorkouts = [
   {
     type: 'Cardio',
     category: 'Aerobic',
-    warmup: standardWarmup,
     main: ['Jog'],
   },
   {
     type: 'Cardio',
     category: 'Aerobic',
-    warmup: standardWarmup,
     main: ['Bicycle'],
   },
   {
     type: 'Cardio',
     category: 'Aerobic',
-    warmup: standardWarmup,
     main: ['Hiking'],
   },
   {
     type: 'Cardio',
     category: 'Aerobic',
-    warmup: standardWarmup,
     main: ['Skateboarding'],
   },
 ];
