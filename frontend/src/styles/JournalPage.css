@@ -238,7 +238,7 @@ h1 {
   margin-top: 20px; /* Optional: Adds space above the title */
   font-size: 4.5rem !important;
   color: #f90101 !important;
-  font-family: "Cursive", sans-serif;
+  font-family: "Dancing Script", cursive;
 }
 
 /* Flex layout for chart and historical data side by side */
