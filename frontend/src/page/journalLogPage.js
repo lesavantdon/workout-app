@@ -5,6 +5,7 @@ import CalisthenicsForm from "../components/CalisthenicsForm";
 import "../styles/JournalPage.css";
 import "../styles/tableStyles.css";
 import "../styles/formStyles.css";
+const API_URL = process.env.REACT_APP_API_URL;
 
 const JournalPage = () => {
   const [selectedWorkout, setSelectedWorkout] = useState("Strength Training");
@@ -20,7 +21,7 @@ const JournalPage = () => {
     const fetchWorkouts = async () => {
       setLoading(true); // Set loading before fetch
       try {
-        const response = await fetch("http://localhost:5000/api/workouts");
+        const response = await fetch(`${API_URL}/api/workouts`);
         const data = await response.json();
 
         const formattedLogs = data.reduce((acc, workout) => {
@@ -43,7 +44,7 @@ const JournalPage = () => {
   const handleLogWorkout = async (workoutData) => {
     try {
       // Send the new workout data to the server
-      const response = await fetch("http://localhost:5000/api/workouts", {
+      const response = await fetch(`${API_URL}/api/workouts`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

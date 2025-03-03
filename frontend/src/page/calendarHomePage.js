@@ -1,4 +1,16 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { useWorkout } from "../context/WorkoutContext"; // Import Context Hook
+import WorkoutKey from "../components/WorkoutKey";
+
+// Function to shuffle an array (Fisher-Yates algorithm)
+const shuffleArray = (array) => {
+  let shuffled = [...array];
+  for (let i = shuffled.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+  }
+  return shuffled;
+};
 
 const getMonthWeeks = () => {
   const today = new Date();
@@ -6,51 +18,108 @@ const getMonthWeeks = () => {
   const year = today.getFullYear();
   const firstDay = new Date(year, today.getMonth(), 1);
   const lastDay = new Date(year, today.getMonth() + 1, 0);
-  const firstDayOfWeek = firstDay.getDay(); 
+  const firstDayOfWeek = firstDay.getDay();
   const daysInMonth = lastDay.getDate();
   const weeks = [];
-  let currentWeek = new Array(firstDayOfWeek).fill(null); 
+  let currentWeek = new Array(firstDayOfWeek).fill(null);
+  let weekIndex = 0;
+  let currentWeekIndex = null;
+
+  // Colors for each genre
+  const genreColors = {
+    Strength: "#FF5733", // Red
+    Cardio: "#33B5FF",   // Blue
+    Calisthenics: "#4CAF50", // Green
+    Yoga: "#9C27B0",     // Purple
+  };
+
+  // Get the current month's workout genres from localStorage or shuffle new ones
+  const currentMonthKey = `${year}-${today.getMonth() + 1}`;
+  let genreOrder = JSON.parse(localStorage.getItem(currentMonthKey));
+
+  if (!genreOrder) {
+    const baseGenres = ["Strength", "Cardio", "Calisthenics", "Yoga"];
+    genreOrder = shuffleArray(baseGenres);
+    // Save the genres to localStorage for the current month
+    localStorage.setItem(currentMonthKey, JSON.stringify(genreOrder));
+  }
 
   for (let day = 1; day <= daysInMonth; day++) {
     currentWeek.push(day);
 
     if (currentWeek.length === 7 || day === daysInMonth) {
-      weeks.push(currentWeek);
+      let genre = genreOrder[weekIndex % genreOrder.length];
+
+      // Prevent the last week from repeating the previous one
+      if (weekIndex > 0 && genre === weeks[weekIndex - 1].genre) {
+        genreOrder = shuffleArray(["Strength", "Cardio", "Calisthenics", "Yoga"]); // Reshuffle if needed
+        genre = genreOrder[0]; // Pick the first one after reshuffling
+      }
+
+      weeks.push({ days: currentWeek, genre, color: genreColors[genre] });
+
+      if (currentWeek.includes(today.getDate())) {
+        currentWeekIndex = weekIndex;
+      }
+
       currentWeek = [];
+      weekIndex++;
     }
   }
 
-  return { month, year, weeks };
+  return { month, year, weeks, currentWeekGenre: weeks[currentWeekIndex]?.genre, today };
 };
 
 const CalendarPage = () => {
-  const { month, year, weeks } = getMonthWeeks();
+  const { setCurrentWeekGenre } = useWorkout(); // Get setCurrentWeekGenre from context
+  const [calendarData, setCalendarData] = useState(null);
+
+  useEffect(() => {
+    const { month, year, weeks, currentWeekGenre, today } = getMonthWeeks();
+    setCalendarData({ month, year, weeks, currentWeekGenre, today });
+    
+    if (currentWeekGenre) {
+      console.log("Setting currentWeekGenre:", currentWeekGenre);
+      setCurrentWeekGenre(currentWeekGenre); // Set the genre in context
+    }
+  }, [setCurrentWeekGenre]);
+
+  if (!calendarData) return <div>Loading...</div>;
+
+  const { month, year, weeks, currentWeekGenre, today } = calendarData;
 
   return (
     <div>
-    <h1 className = "h1" >{month} {year} </h1>
-    <div className="monthly-workout">
-      <div className="calendar">
-        {/* Days of the week */}
-        <div className="weekdays">
-          {["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"].map((day, idx) => (
-            <div key={idx} className="weekday">{day}</div>
-          ))}
-        </div>
-        {/* Calendar grid */}
-        <div className="days">
-          {weeks.map((week, weekIndex) => (
-            <div key={weekIndex} className="week">
-              {week.map((day, dayIndex) => (
-                <div key={dayIndex} className={`day ${day ? "" : "empty"}`}>
-                  {day || ""}
-                </div>
-              ))}
-            </div>
-          ))}
+      <div>
+        <h1>Workout Calendar</h1>
+        <WorkoutKey />
+        {/* Display the current week's genre with full date */}
+        <div className="current-week">
+          <h2>You're in {currentWeekGenre} Training Week</h2>
+          <p>Today's Date: {today.toDateString()}</p>
         </div>
       </div>
-    </div>
+      <h1>{month} {year}</h1>
+      <div className="calendar">
+        {/* Calendar Days */}
+        {weeks.map((week, weekIndex) => (
+          <div key={weekIndex} className="week">
+            {week.days.map((day, dayIndex) => (
+              <div
+                key={dayIndex}
+                className={`day ${day ? "" : "empty"}`}
+                style={{
+                  backgroundColor: day ? week.color : "transparent",
+                  color: day ? "white" : "transparent", 
+                }}
+                title={day ? `${month} ${day}, ${year}` : ""} // Full date on hover
+              >
+                {day || ""}
+              </div>
+            ))}
+          </div>
+        ))}
+      </div>
     </div>
   );
 };

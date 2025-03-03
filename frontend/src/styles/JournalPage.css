@@ -1,11 +1,9 @@
-/* Container for the page content */
 .journal-container {
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
 }
 
-/* Form Styles */
 .journal-form {
   background-color: #f4f4f4;
   padding: 20px;
@@ -43,7 +41,6 @@
   background-color: #0056b3;
 }
 
-/* Journal Entries */
 .journal-entry {
   background-color: white;
   border-radius: 8px;
@@ -64,7 +61,6 @@
   font-weight: bold;
 }
 
-/* General Page Styling */
 .journal-page {
   max-width: 600px;
   margin: auto;
@@ -72,7 +68,6 @@
   font-family: Arial, sans-serif;
 }
 
-/* Workout Form Styling */
 .workout-form {
   background: #f8f9fa;
   padding: 15px;
@@ -108,7 +103,6 @@
   background: #0056b3;
 }
 
-/* Success & Error Messages */
 .success-text {
   color: green;
   font-weight: bold;
@@ -119,7 +113,6 @@
   font-weight: bold;
 }
 
-/* Workout Log Styling */
 .workout-log {
   margin-top: 20px;
   padding: 15px;
@@ -190,22 +183,20 @@
   margin-top: 10px;
 }
 
-/* Container for the buttons */
 .workout-category-buttons {
   display: flex;
-  justify-content: space-between; /* Spread buttons equally */
+  justify-content: space-between;
   margin-bottom: 20px;
   padding: 10px 0;
-  width: 100%; /* Ensure full width */
+  width: 100%;
 }
 
-/* Individual button styling */
 .workout-category-buttons button {
-  flex: 1; /* Ensure buttons span equally */
+  flex: 1;
   padding: 10px 20px;
   margin: 0 10px;
-  background-color: #4caf50; /* Green background */
-  color: white; /* White text */
+  background-color: #4caf50;
+  color: white;
   border: none;
   border-radius: 5px;
   font-size: 16px;
@@ -215,44 +206,40 @@
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-/* Button hover effect */
 .workout-category-buttons button:hover {
   background-color: #45a049;
-  transform: scale(1.05); /* Slightly enlarge the button */
+  transform: scale(1.05);
 }
 
-/* Active button styling (if needed for active state) */
 .workout-category-buttons button.active {
-  background-color: #2e8b57; /* Darker green when active */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  background-color: #2e8b57;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
 .workout-category-buttons button:focus {
-  outline: none; /* Remove the default focus outline */
-  box-shadow: 0 0 0 2px #45a049; /* Green focus ring */
+  outline: none;
+  box-shadow: 0 0 0 2px #45a049;
 }
 
-/* Center the title */
 h1 {
-  text-align: center; /* Centers the text horizontally */
-  margin-top: 20px; /* Optional: Adds space above the title */
+  text-align: center;
+  margin-top: 20px;
   font-size: 4.5rem !important;
   color: #f90101 !important;
   font-family: "Dancing Script", cursive;
 }
 
-/* Flex layout for chart and historical data side by side */
 .journal-content {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px; /* Space between the sections */
+  gap: 20px;
   justify-content: space-between;
 }
 
 .historical-data,
 .chart-container {
-  flex: 1; /* Both containers take equal space */
-  min-width: 300px; /* Prevents them from getting too small */
+  flex: 1;
+  min-width: 300px;
 }
 
 .workout-table {
@@ -290,11 +277,11 @@ h1 {
 }
 
 .workout-category-buttons button.active {
-  background-color: #007bff; /* Highlight with a blue color */
-  color: rgb(238, 96, 96); /* Change text color */
-  border-color: #007bff; /* Match border with background */
+  background-color: #007bff;
+  color: rgb(238, 96, 96);
+  border-color: #007bff;
 }
 
 .workout-category-buttons button:hover {
-  background-color: #e2e6ea; /* Light grey background on hover */
+  background-color: #e2e6ea;
 }

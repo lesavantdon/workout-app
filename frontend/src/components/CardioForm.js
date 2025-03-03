@@ -71,7 +71,7 @@ const CardioForm = ({ onLogWorkout }) => {
         placeholder="e.g., 3.5"
       />
 
-      <label>Time (min)</label>
+      <label>Duration (min)</label>
       <input
         type="number"
         value={duration}

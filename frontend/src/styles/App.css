@@ -33,14 +33,12 @@
   }
 }
 
-/* General Layout */
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
 }
 
-/* Navbar Styles */
 .navbar {
   background-color: #f8f9fa;
 }
@@ -60,14 +58,12 @@
   color: #007bff;
 }
 
-/* General Container */
 .journal-container {
   max-width: 900px;
   margin: 0 auto;
   padding: 20px;
 }
 
-/* Tabs for Workout Selection */
 .tabs {
   display: flex;
   justify-content: center;
@@ -89,7 +85,6 @@
   color: white;
 }
 
-/* Form Styles */
 .journal-form {
   background-color: #f4f4f4;
   padding: 20px;
@@ -124,10 +119,6 @@
 
 .journal-form button:hover {
   background-color: #0056b3;
-}
-
-* Tabloid Table */ .table-container {
-  overflow-x: auto;
 }
 
 .tabloid-table {

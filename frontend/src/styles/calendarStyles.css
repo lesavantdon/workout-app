@@ -1,7 +1,6 @@
-/* Calendar */
 .monthly-calendar {
   font-family: Arial, sans-serif;
-  width: 700px; /* FIXED WIDTH */
+  width: 700px;
   margin: 0 auto;
 }
 
@@ -14,7 +13,7 @@
 .weekdays,
 .week {
   display: grid;
-  grid-template-columns: repeat(7, 100px); /* FIXED COLUMN SIZE */
+  grid-template-columns: repeat(7, 100px);
 }
 
 .workout-table {
