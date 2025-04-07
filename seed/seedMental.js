@@ -5,21 +5,24 @@ const MentalExercise = require('../be/config/models/mental');
 
 
 const activities = [
-  { name: 'Writing Books', description: 'Spend time working on a book or novel.' },
   { name: 'Writing Movie Production Scripts', description: 'Develop a screenplay or story outline.' },
   { name: 'Painting/Sketching', description: 'Create a piece of art using any medium.' },
   { name: 'Sudoku', description: 'Solve Sudoku puzzles to challenge your brain.' },
   { name: 'Video Games', description: 'Play games for relaxation or skill improvement.' },
   { name: 'Reading', description: 'Read off kindle library.' },
-  { name: 'Music Production', description: 'Compose or produce music.' },
-  { name: 'Learn French, Japanese or German', description: 'Practice a new language or review vocabulary.' },
+  { name: 'Music Production/ Guitar', description: 'Compose or produce music, learn guitar.' },
+  { name: 'Learn French', description: 'Practice French.' },
+   { name: 'Learn Tamil/Telagu', description: 'Practice Tamil/Telagu.'},
+   { name: 'Learn Japanese', description: 'Practice Japanese.'},
+   { name: 'Learn Mandarin', description: 'Practice Mandarin.'},
   { name: 'Skateboarding', description: 'Spend time improving your skateboarding skills.' },
   { name: 'Blender 3D Modeling', description: 'Create 3D models or animations using Blender.' },
   { name: 'Jewelry Design', description: 'Sketch or design creative jewelry pieces.' },
-  { name: 'Making a YouTube Video Sketch', description: 'Plan and shoot a short YouTube video.' },
-  { name: 'Sketching Automobiles + 3d blender designs', description: 'Design and draw vehicle concepts.' },
+  { name: 'Edit YouTube Video Sketch from weekend', description: 'edit and produce short YouTube video.' },
   { name: 'Coding Problems', description: 'use CodeChef and/or Leetcode to code problems.'},
-  {name: 'Record Hunting', description: 'Hunting for reggae, old school records'}
+  {name: 'Study Forex Charts', description: 'Work on algorithms, math problems, develop new chart strategies for trading, trading bots etc. '},
+  {name: 'Tattoo', description: 'Tattoo your leg'},
+ 
 ];
 
 

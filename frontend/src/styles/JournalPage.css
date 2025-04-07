@@ -285,3 +285,15 @@ h1 {
 .workout-category-buttons button:hover {
   background-color: #e2e6ea;
 }
+
+/* Custom styling to ensure navbar items are displayed horizontally */
+.navbar-nav {
+  display: flex;
+  flex-direction: row; /* Ensure the links are in a row */
+  justify-content: space-around; /* Distribute the items evenly */
+}
+
+.nav-item {
+  margin-left: 10px;
+  margin-right: 10px;
+}

@@ -33,7 +33,8 @@ const getMonthWeeks = () => {
     Yoga: "#9C27B0",     // Purple
   };
 
-  // Get the current month's workout genres from localStorage or shuffle new ones
+  
+  
   const currentMonthKey = `${year}-${today.getMonth() + 1}`;
   let genreOrder = JSON.parse(localStorage.getItem(currentMonthKey));
 
@@ -96,7 +97,7 @@ const CalendarPage = () => {
         {/* Display the current week's genre with full date */}
         <div className="current-week">
           <h2>You're in {currentWeekGenre} Training Week</h2>
-          <p>Today's Date: {today.toDateString()}</p>
+          <p>{today.toDateString()}</p>
         </div>
       </div>
       <h1>{month} {year}</h1>
@@ -104,19 +105,27 @@ const CalendarPage = () => {
         {/* Calendar Days */}
         {weeks.map((week, weekIndex) => (
           <div key={weekIndex} className="week">
-            {week.days.map((day, dayIndex) => (
-              <div
-                key={dayIndex}
-                className={`day ${day ? "" : "empty"}`}
-                style={{
-                  backgroundColor: day ? week.color : "transparent",
-                  color: day ? "white" : "transparent", 
-                }}
-                title={day ? `${month} ${day}, ${year}` : ""} // Full date on hover
-              >
-                {day || ""}
-              </div>
-            ))}
+            {week.days.map((day, dayIndex) => {
+              // Get the day of the week (0-6)
+              const dayOfWeek = new Date(year, today.getMonth(), day).getDay();
+
+              // If it's Saturday (6) or Sunday (0), display a blocked-out day
+              const isWeekend = dayOfWeek === 6 || dayOfWeek === 0;
+
+              return (
+                <div
+                  key={dayIndex}
+                  className={`day ${day ? "" : "empty"} ${isWeekend ? "weekend" : ""}`}
+                  style={{
+                    backgroundColor: isWeekend ? "transparent" : week.color,
+                    color: isWeekend ? "gray" : "white", // Gray out weekends
+                  }}
+                  title={day ? `${month} ${day}, ${year}` : ""}
+                >
+                  {isWeekend ? " No Workout" : day}
+                </div>
+              );
+            })}
           </div>
         ))}
       </div>

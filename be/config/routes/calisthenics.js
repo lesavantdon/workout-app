@@ -14,7 +14,7 @@ router.post('/add', async (req, res) => {
 });
 
 // Route to get all calisthenics workouts
-router.get('/all', async (req, res) => {
+router.get('/', async (req, res) => {
   try {
     const workouts = await Calisthenics.find();
     res.status(200).json(workouts);

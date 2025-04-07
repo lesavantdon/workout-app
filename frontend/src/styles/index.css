@@ -59,3 +59,15 @@ code {
   text-align: center;
   width: 100%;
 }
+
+/* Custom styling to ensure navbar items are displayed horizontally */
+.navbar-nav {
+  display: flex;
+  flex-direction: row; /* Ensure the links are in a row */
+  justify-content: space-around; /* Distribute the items evenly */
+}
+
+.nav-item {
+  margin-left: 10px;
+  margin-right: 10px;
+}

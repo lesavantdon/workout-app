@@ -4,7 +4,8 @@ const Yoga = require('../be/config/models/yoga');
 
 const yogaData = [
   {
-    type: "Hatha Yoga",
+    type: "Yoga",
+    subtype: "Hatha Yoga",
     main: [
       { pose: "Mountain Pose", sanskrit: "Tadasana" },
       { pose: "Cat-Cow Pose", sanskrit: "Marjaryasana-Bitilasana" },
@@ -22,7 +23,8 @@ const yogaData = [
     ],
   },
   {
-    type: "Kundalini Yoga",
+    type: "Yoga",
+    subtype: "Kundalini Yoga",
     main: [
       { pose: "Spinal Flex", sanskrit: "Sukhasana Spinal Flex" },
       { pose: "Cat-Cow Pose", sanskrit: "Marjaryasana-Bitilasana" },
@@ -39,7 +41,8 @@ const yogaData = [
     ],
   },
   {
-    type: "Yin Yoga",
+    type: "Yoga",
+    subtype:"Yin Yoga",
     main: [
       { pose: "Child’s Pose", sanskrit: "Balasana" },
       { pose: "Butterfly Pose", sanskrit: "Baddha Konasana" },
@@ -56,7 +59,8 @@ const yogaData = [
     ],
   },
   {
-    type: "Vinyasa Yoga",
+    type: "Yoga",
+    subtype:"Vinyasa Yoga",
     main: [
       { pose: "Sun Salutation A", sanskrit: "Surya Namaskar A" },
       { pose: "Sun Salutation B", sanskrit: "Surya Namaskar B" },
@@ -73,7 +77,8 @@ const yogaData = [
     ],
   },
   {
-    type: "Power Yoga",
+    type: "Yoga",
+    subtype:"Power Yoga",
     main: [
       { pose: "Downward Dog", sanskrit: "Adho Mukha Svanasana" },
       { pose: "Warrior I", sanskrit: "Virabhadrasana I" },

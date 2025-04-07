@@ -57,7 +57,7 @@ const calisthenicsWorkouts = [
     ],
     sets: 3,
     reps: '8-12',
-    r
+    
   },
  
   // Planks

@@ -27,6 +27,13 @@ const hiitWorkouts = [
     type: 'Cardio',
     category: 'HIIT',
     main: [
+      '4 quarter mile sprints',
+    ],
+  },
+  {
+    type: 'Cardio',
+    category: 'HIIT',
+    main: [
       'Stair sprints',
     ],
   },
@@ -44,8 +51,14 @@ const aerobicWorkouts = [
   {
     type: 'Cardio',
     category: 'Aerobic',
-    main: ['Jog'],
+    main: ['5 mile Jog'],
   },
+  {
+    type: 'Cardio',
+    category: 'Aerobic',
+    main: ['1 mile run'],
+  },
+
   {
     type: 'Cardio',
     category: 'Aerobic',
@@ -59,7 +72,7 @@ const aerobicWorkouts = [
   {
     type: 'Cardio',
     category: 'Aerobic',
-    main: ['Skateboarding'],
+    main: ['Skateboarding, bowl and halfpipe'],
   },
 ];
 

@@ -14,7 +14,7 @@ router.post('/add', async (req, res) => {
 });
 
 // Route to get all strength workouts
-router.get('/all', async (req, res) => {
+router.get('/', async (req, res) => {
   try {
     const workouts = await Strength.find(); // Fetch all strength workouts.
     res.status(200).json(workouts); // Respond with the list of workouts.

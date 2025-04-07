@@ -14,7 +14,7 @@ router.post('/add', async (req, res) => {
 });
 
 // Route to get all cardio workouts
-router.get('/all', async (req, res) => {
+router.get('/', async (req, res) => {
   try {
     const workouts = await Cardio.find(); // Fetch all cardio workouts.
     res.status(200).json(workouts); // Respond with the list of workouts.

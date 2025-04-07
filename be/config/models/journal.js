@@ -7,6 +7,7 @@ const journalSchema = new mongoose.Schema({
   warmup: { type: [String], required: true }, // Warmup exercises
   main: { type: [String], required: true }, // Main exercises
   notes: { type: String }, // Optional extra notes for the workout
+  lastUsed: { type: String, default: null },
 });
 
 const Journal = mongoose.model('Journal', journalSchema);

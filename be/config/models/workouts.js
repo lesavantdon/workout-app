@@ -8,6 +8,7 @@ const WorkoutSchema = new mongoose.Schema({
   reps: Number,
   distance: String,
   duration: String,
+  lastUsed: { type: String, default: null },
 });
 
-module.exports = mongoose.model("Workout", WorkoutSchema);
+module.exports = mongoose.model("Workout", WorkoutSchema, 'workouts');

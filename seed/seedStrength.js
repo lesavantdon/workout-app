@@ -38,7 +38,7 @@ const backWorkouts = [
 const armsWorkouts = [
   {
     type: 'Strength',
-    category: 'Arms/Abs',
+    category: 'Arms & Abs',
     warmup: standardWarmup,
     main: [
       'Curls (Barbell or Dumbbell): 4 sets of 10-12 reps',

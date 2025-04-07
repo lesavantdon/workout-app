@@ -26,10 +26,11 @@ const calisthenicsSchema = new mongoose.Schema({
   duration: {
     type: String,
     required: false,
-  }
+  },
+  lastUsed: { type: String, default: null },
 });
 
 // Create the model based on the schema
-const Calisthenics = mongoose.model('Calisthenics', calisthenicsSchema, 'Calisthenics');
+const Calisthenics = mongoose.model('Calisthenics', calisthenicsSchema, 'calisthenics');
 
 module.exports = Calisthenics;

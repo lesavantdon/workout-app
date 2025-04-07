@@ -15,10 +15,11 @@ const strengthSchema = new mongoose.Schema({
   sets: { 
     type: Number, 
     required: false,  // The number of sets for the workout
-  }
+  },
+  lastUsed: { type: String, default: null },
 });
 
 // Create model based on the schema
-const Strength = mongoose.model('Strength', strengthSchema, 'Strength');
+const Strength = mongoose.model('Strength', strengthSchema, 'strength');
 
 module.exports = Strength;
