@@ -4,6 +4,7 @@ import "../styles/JournalPage.css"; // Import the new CSS file
 const StrengthTrainingForm = ({ onLogWorkout }) => {
   const [category, setCategory] = useState("Arms/Abs");
   const [exercise, setExercise] = useState("");
+  const [duration, setDuration] = useState("");  // ✅ Added state
   const [reps, setReps] = useState("");
   const [weight, setWeight] = useState("");
   const [error, setError] = useState("");
@@ -45,10 +46,19 @@ const StrengthTrainingForm = ({ onLogWorkout }) => {
       <input type="text" value={exercise} onChange={(e) => setExercise(e.target.value)} />
 
       <label>Reps:</label>
-      <input type="number" value={reps} onChange={(e) => setReps(e.target.value)} />
+      <input type="text" value={reps} onChange={(e) => setReps(e.target.value)} />
+       
+       <label>Duration (min)</label>
+      <input
+        type="text"
+        value={duration}
+        onChange={(e) => setDuration(e.target.value)}
+        placeholder="e.g., 45"
+      />
 
       <label>Weight (lbs/kg):</label>
-      <input type="number" value={weight} onChange={(e) => setWeight(e.target.value)} />
+      <input type="text" value={weight} onChange={(e) => setWeight(e.target.value)} />
+      
 
       <button type="submit">Log Workout</button>
     </form>

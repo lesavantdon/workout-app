@@ -82,6 +82,7 @@ const JournalPage = () => {
           <th>Exercise</th>
           <th>Reps</th>
           <th>Weight (lbs)</th>
+          <th>Duration</th>
         </tr>
       );
     } else if (selectedWorkout === "Cardio") {

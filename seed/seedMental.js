@@ -17,7 +17,7 @@ const activities = [
    { name: 'Learn Mandarin', description: 'Practice Mandarin.'},
   { name: 'Skateboarding', description: 'Spend time improving your skateboarding skills.' },
   { name: 'Blender 3D Modeling', description: 'Create 3D models or animations using Blender.' },
-  { name: 'Jewelry Design', description: 'Sketch or design creative jewelry pieces.' },
+  { name: 'Jewelry Design + Making', description: 'Sketch or design creative jewelry pieces.' },
   { name: 'Edit YouTube Video Sketch from weekend', description: 'edit and produce short YouTube video.' },
   { name: 'Coding Problems', description: 'use CodeChef and/or Leetcode to code problems.'},
   {name: 'Study Forex Charts', description: 'Work on algorithms, math problems, develop new chart strategies for trading, trading bots etc. '},
@@ -43,3 +43,4 @@ const seedMentalExercises = async () => {
 };
 
 seedMentalExercises();
+ 

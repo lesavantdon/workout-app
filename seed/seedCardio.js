@@ -72,7 +72,7 @@ const aerobicWorkouts = [
   {
     type: 'Cardio',
     category: 'Aerobic',
-    main: ['Skateboarding, bowl and halfpipe'],
+    main: ['Skateboarding'],
   },
 ];
 

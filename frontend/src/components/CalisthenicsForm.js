@@ -44,11 +44,11 @@ const CalisthenicsForm = ({ onLogWorkout }) => {
       <input type="text" value={exercise} onChange={(e) => setExercise(e.target.value)} />
 
       <label>Reps:</label>
-      <input type="number" value={reps} onChange={(e) => setReps(e.target.value)} />
+      <input type="text" value={reps} onChange={(e) => setReps(e.target.value)} />
 
       <label>Duration (min)</label>
       <input
-        type="number"
+        type="text"
         value={duration}
         onChange={(e) => setDuration(e.target.value)}
         placeholder="e.g., 45"

@@ -65,7 +65,7 @@ const CardioForm = ({ onLogWorkout }) => {
 
       <label>Distance (mi)</label>
       <input
-        type="number"
+        type="text"
         value={distance}
         onChange={(e) => setDistance(e.target.value)}
         placeholder="e.g., 3.5"
@@ -73,7 +73,7 @@ const CardioForm = ({ onLogWorkout }) => {
 
       <label>Duration (min)</label>
       <input
-        type="number"
+        type="text"
         value={duration}
         onChange={(e) => setDuration(e.target.value)}
         placeholder="e.g., 45"
